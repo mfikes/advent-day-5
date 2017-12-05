@@ -7,26 +7,31 @@
 
 (defn part-2-array []
   (let [^ints maze
-               (->>
-                 (into [] data)
-                 (into-array #?(:clj Integer/TYPE :cljs nil)))
+        (->>
+         (into []
+               data)
+         (into-array Integer/TYPE))
         length ^int (alength maze)]
-    (loop [maze maze
-           cur-pos 0
+    (loop [cur-pos 0
            steps 0]
-      (if (< cur-pos
-            length)
-        (if-some [cur-val
-                  (aget maze cur-pos)]
-          (recur (doto maze
-                   (aset
-                     cur-pos
-                     (if (>= cur-val 3)
-                       (dec cur-val)
-                       (inc cur-val))))
-            (+ cur-pos cur-val)
-            (inc steps))
-          steps)
+      (if (< cur-pos length)
+        (let [cur-val (aget maze cur-pos)]
+          (if (zero? cur-val)
+            (do
+              (doto maze
+                (aset cur-pos 2))
+              (recur
+               (inc cur-pos)
+               (+ steps 2)))
+            (do (doto maze
+                  (aset
+                   cur-pos
+                   (if (>= cur-val 3)
+                     (dec cur-val)
+                     (inc cur-val))))
+                (recur
+                 (+ cur-pos cur-val)
+                 (inc steps)))))
         steps))))
 
 (defn -main [& args]
