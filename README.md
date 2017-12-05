@@ -4,8 +4,14 @@ Day 5 solution in optimized ClojureScript targeting Node.js.
 
 ## Usage
 
-0. lein cljsbuild once
-0. node main.js
+### Clojure
+
+0. `lein run`
+
+### ClojureScript / Node.js
+
+0. `lein cljsbuild once`
+0. `node main.js`
 
 ## License
 
