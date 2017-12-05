@@ -10,6 +10,8 @@ Day 5 solution in optimized ClojureScript targeting Node.js.
 
 ### ClojureScript / Node.js
 
+> Note, when building, it is OK to ignore warnings caused by the Clojure type hints.
+
 0. `lein cljsbuild once`
 0. `node main.js`
 
