@@ -15,6 +15,10 @@ Day 5 solution in optimized ClojureScript targeting Node.js.
 0. `lein cljsbuild once`
 0. `node main.js`
 
+### Self-Hosted ClojureScript / Planck
+
+0. `planck src/advent_day_5_cljs_node/core.cljc`
+
 ## License
 
 Copyright © 2017 Mike Fikes and Contributors
