@@ -1,4 +1,4 @@
-(ns advent-day-5-cljs-node.core
+(ns advent-day-5.core
   #?(:cljs (:require [cljs.nodejs :as nodejs])))
 
 #?(:cljs (nodejs/enable-util-print!))

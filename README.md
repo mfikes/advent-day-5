@@ -17,7 +17,7 @@ Day 5 solution in optimized ClojureScript targeting Node.js.
 
 ### Self-Hosted ClojureScript / Planck
 
-0. `planck src/advent_day_5_cljs_node/core.cljc`
+0. `planck src/advent_day_5/core.cljc`
 
 ## License
 
