@@ -7,6 +7,7 @@
                  [org.clojure/clojurescript "1.9.946"]]
   :plugins [[lein-cljsbuild "1.1.7"]]
   :main advent-day-5.core
+  :jvm-opts ["-server"]
   :cljsbuild {:builds [{:source-paths ["src"]
                         :compiler     {:main          advent-day-5.core
                                        :output-to     "main.js"
