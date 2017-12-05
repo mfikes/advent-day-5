@@ -9,3 +9,6 @@ pom.xml.asc
 /.nrepl-port
 .hgignore
 .hg/
+/main.js
+/.idea/*
+/advent-day-5-cljs-node.iml

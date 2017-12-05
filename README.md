@@ -1,15 +1,16 @@
 # advent-day-5-cljs-node
 
-A Clojure library designed to ... well, that part is up to you.
+Day 5 solution in optimized ClojureScript targeting Node.js.
 
 ## Usage
 
-FIXME
+0. lein cljsbuild once
+0. node main.js
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright © 2017 Mike Fikes and Contributors
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
-# advent-day-5-cljs-node
+
