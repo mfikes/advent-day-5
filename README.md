@@ -1,6 +1,6 @@
-# advent-day-5-cljs-node
+# advent-day-5
 
-Day 5 solution in optimized ClojureScript targeting Node.js.
+Day 5 solution in Clojure and ClojureScript, set up for perf comparisons.
 
 ## Usage
 
