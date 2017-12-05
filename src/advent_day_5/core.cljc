@@ -10,7 +10,7 @@
         (->>
          (into []
                data)
-         (into-array Integer/TYPE))
+         (into-array #?(:clj Integer/TYPE :cljs nil)))
         length ^int (alength maze)]
     (loop [cur-pos 0
            steps 0]
