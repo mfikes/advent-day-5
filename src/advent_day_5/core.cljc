@@ -14,18 +14,19 @@
     (loop [maze maze
            cur-pos 0
            steps 0]
-      (if-let [^int cur-val
-               (and (< cur-pos
-                      length)
-                    (aget maze cur-pos))]
-        (recur (doto maze
-                 (aset
-                   cur-pos
-                   (if (>= cur-val 3)
-                     (dec cur-val)
-                     (inc cur-val))))
-          (+ cur-pos cur-val)
-          (inc steps))
+      (if (< cur-pos
+            length)
+        (if-some [cur-val
+                  (aget maze cur-pos)]
+          (recur (doto maze
+                   (aset
+                     cur-pos
+                     (if (>= cur-val 3)
+                       (dec cur-val)
+                       (inc cur-val))))
+            (+ cur-pos cur-val)
+            (inc steps))
+          steps)
         steps))))
 
 (defn -main [& args]
