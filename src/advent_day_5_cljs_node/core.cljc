@@ -29,7 +29,9 @@
         steps))))
 
 (defn -main [& args]
-  (println (time (part-2-array))))
+  (dotimes [n 60]
+    (println "Run" (inc n) "of 60.")
+    (println (time (part-2-array)))))
 
 #?(:cljs (set! *main-cli-fn* -main))
 
